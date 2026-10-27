@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WPG — From idea to the machine | CNC panel design software</title>
+  <meta name="description" content="WPG turns one design into cut-ready sheets, clean machine files and an assembly guide — for walls, ceilings, furniture and every CNC panel product. In development: join early access.">
+  <meta name="theme-color" content="#0b0b0a">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="WPG — From idea to the machine">
+  <meta property="og:description" content="Design software for CNC panel products. Nesting, machine files and assembly guides in one tool. Join early access.">
+  <meta property="og:image" content="assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&amp;family=Instrument+Serif:ital@0;1&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+  <link rel="preload" as="image" href="assets/img/hero-wave-lobby.jpg">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="js/config.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ================= HERO ================= -->
+<div class="hero">
+  <img class="hero__bg" src="assets/img/hero-wave-lobby.jpg" alt="" width="1672" height="941">
+  <div class="hero__scrim" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="#top" aria-label="WPG home">
+        <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect x="1" y="1" width="32" height="32" rx="8" fill="#F2F1EE"/><path d="M9 8v18M14 11v12M19 8v18M24 13v8" stroke="#FF5A1F" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <span class="brand__name">WPG</span>
+      </a>
+      <nav class="site-nav mono" aria-label="Main">
+        <a href="#create">Create</a>
+        <a href="#materials">Materials</a>
+        <a href="#fixtures">Fixtures</a>
+        <a href="#nesting">Nesting</a>
+        <a href="#output">Output</a>
+        <a href="#products">Products</a>
+      </nav>
+      <a class="btn btn--primary btn--small" href="#early-access">Early access</a>
+    </div>
+  </header>
+
+  <section id="top" class="wrap hero__content" aria-labelledby="hero-title">
+    <p class="hero__eyebrow mono">Design software for CNC panel products</p>
+    <h1 id="hero-title" class="display h1 hero__title">From idea to the <span class="serif">machine.</span></h1>
+    <p class="hero__lede">WPG turns one design into cut-ready sheets, clean machine files and an assembly guide — for walls, ceilings, furniture, screens and every panel product in between.</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="#early-access">Be first to try</a>
+      <a class="btn btn--ghost" href="#create">See how it works</a>
+    </div>
+  </section>
+
+  <div class="wrap hero__caption"><span class="mono">Sculpted wave wall · birch plywood · designed in WPG</span></div>
+</div>
+
+<main id="main">
+
+<!-- ================= 01 CREATE ================= -->
+<section id="create" class="section section--light" aria-labelledby="create-title">
+  <div class="wrap">
+    <div class="chapter-head" data-reveal>
+      <div class="chapter-head__label"><span class="chapter-head__num" aria-hidden="true">01</span><span class="chapter-head__tag mono">Create</span></div>
+      <div class="chapter-head__text">
+        <h2 id="create-title" class="display h2">Create and modify <span class="serif">with ease.</span></h2>
+        <p class="lede">Stack generators like layers. Change one setting and see the finished product at once.</p>
+      </div>
+    </div>
+
+    <div class="stage">
+      <img class="shot" id="outline-shot" data-reveal="grow" src="assets/img/flow-veins-rectangle.jpg" width="1600" height="1000" alt="Flow Veins relief wall with a rectangular outline, on a dining-room wall" loading="lazy">
+
+      <div class="float float--tl" data-reveal="pop">
+        <div class="ui" aria-label="Generator stack, interface preview">
+          <div class="ui__head"><span>Generators</span><span>A · Flow wall</span></div>
+          <div class="ui__body">
+            <span class="ui__group">Base shape</span>
+            <div class="ui__item"><span class="tick"></span>Wall</div>
+            <div class="ui__group-row"><span class="ui__group">Relief</span><span class="ui__plus" aria-hidden="true">+</span></div>
+            <div class="ui__item is-on"><span class="tick"></span>Flow Veins</div>
+            <div class="ui__item"><span class="tick"></span>LED curves</div>
+            <span class="ui__group">Slicing</span>
+            <div class="ui__item"><span class="tick"></span>Slicer</div>
+            <span class="ui__group">Holding parts</span>
+            <div class="ui__item"><span class="tick"></span>Furring strips</div>
+            <div class="ui__add"><b>+</b>Add generator</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="float float--br" data-reveal="pop">
+        <div class="ui">
+          <div class="ui__head"><span>Wall</span><span>Base shape</span></div>
+          <div class="ui__body">
+            <span class="ui__label">Outline</span>
+            <div class="seg" role="group" aria-label="Outline of the wall">
+              <button type="button" class="seg__btn" data-outline="rectangle" aria-pressed="true">Rectangle</button>
+              <button type="button" class="seg__btn" data-outline="free" aria-pressed="false">Free shape</button>
+            </div>
+          </div>
+          <div class="ui__head ui__head--split"><span>Flow Veins</span><span>Relief</span></div>
+          <div class="ui__body">
+            <div class="ui__row"><span class="ui__label">Vein density</span><div class="ui__slider"><span class="ui__slider-fill" style="width:46%"></span><span class="ui__slider-val">4.6</span></div></div>
+            <div class="ui__row"><span class="ui__label">Main flow bend</span><div class="ui__slider"><span class="ui__slider-fill" style="width:65%"></span><span class="ui__slider-val">0.65</span></div></div>
+            <div class="ui__row"><span class="ui__label">Cross flow bend</span><div class="ui__slider"><span class="ui__slider-fill" style="width:30%"></span><span class="ui__slider-val">0.30</span></div></div>
+            <div class="ui__row"><span class="ui__label">Vein mix</span><div class="ui__slider"><span class="ui__slider-fill" style="width:55%"></span><span class="ui__slider-val">55%</span></div></div>
+            <div class="ui__row"><span class="ui__label">Variant</span><div class="ui__value">12</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- slicing -->
+    <div class="sub-head" data-reveal>
+      <h3 class="display h3">Same shape. <span class="serif">Sliced differently.</span></h3>
+      <span class="sub-head__note mono">Any solid — wall, ceiling, furniture · example: ceiling</span>
+    </div>
+    <div class="stage" id="slicer">
+      <div class="shot-frame" data-reveal="grow">
+        <img id="slicer-shot" src="assets/img/ceiling-parallel.jpg" width="1200" height="1200" alt="Suspended baffle ceiling made of parallel slats" loading="lazy">
+      </div>
+
+      <div class="float float--tl" data-reveal="pop">
+        <div class="ui">
+          <div class="ui__head"><span>Generators</span><span>B · Baffle ceiling</span></div>
+          <div class="ui__body">
+            <span class="ui__group">Base shape</span>
+            <div class="ui__item"><span class="tick"></span>Ceiling</div>
+            <div class="ui__group-row"><span class="ui__group">Relief</span><span class="ui__plus" aria-hidden="true">+</span></div>
+            <div class="ui__item"><span class="tick"></span>Dune waves</div>
+            <span class="ui__group">Slicing</span>
+            <div class="ui__item is-on"><span class="tick"></span>Slicer</div>
+            <div class="options" role="radiogroup" aria-label="Slicer type">
+              <button type="button" class="option" role="radio" data-slice="parallel" aria-checked="true"><span class="option__dot" aria-hidden="true"></span>Parallel slats</button>
+              <button type="button" class="option" role="radio" data-slice="cross" aria-checked="false"><span class="option__dot" aria-hidden="true"></span>Cross-slices</button>
+            </div>
+            <span class="ui__group">Holding parts</span>
+            <div class="ui__item"><span class="tick"></span>Pre-made fastenings</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="float float--br" data-reveal="pop">
+        <div class="ui">
+          <div class="ui__head"><span>Slicer</span><span id="slicer-name">Parallel slats</span></div>
+          <div class="ui__body" data-slice-panel="parallel">
+            <div class="ui__row"><span class="ui__label">Stack along</span><div class="ui__select"><span>X</span><span aria-hidden="true">▾</span></div></div>
+            <div class="ui__row"><span class="ui__label">Gap between</span><div class="ui__value">120 mm</div></div>
+            <div class="ui__row"><span class="ui__label">Angle</span><div class="ui__value">0°</div></div>
+          </div>
+          <div class="ui__body" data-slice-panel="cross" hidden>
+            <div class="ui__row"><span class="ui__label">Slices along X</span><div class="ui__value">9</div></div>
+            <div class="ui__row"><span class="ui__label">Slices along Y</span><div class="ui__value">7</div></div>
+            <div class="ui__row"><span class="ui__label">Angle</span><div class="ui__value">0°</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 02 MATERIALS ================= -->
+<section id="materials" class="section section--light section--tight-top" aria-labelledby="materials-title">
+  <div class="wrap">
+    <div class="chapter-head" data-reveal>
+      <div class="chapter-head__label"><span class="chapter-head__num" aria-hidden="true">02</span><span class="chapter-head__tag mono">Materials</span></div>
+      <div class="chapter-head__text">
+        <h2 id="materials-title" class="display h2">Assign materials <span class="serif">and colours.</span></h2>
+        <p class="lede">Every product and every inlay gets its own material — with its real thickness, sheet size and look. Try one.</p>
+      </div>
+    </div>
+
+    <div class="stage">
+      <img class="shot" id="material-shot" data-reveal="grow" src="assets/img/bench-birch.jpg" width="1254" height="1254" alt="Sliced wave bench in birch plywood" loading="lazy">
+      <div class="float float--tr float--wide" data-reveal="pop">
+        <div class="ui">
+          <div class="ui__head"><span>Materials</span><span>4 in project</span></div>
+          <div class="ui__body ui__body--tight" role="group" aria-label="Pick a material">
+            <button type="button" class="material" aria-pressed="true" data-src="assets/img/bench-birch.jpg" data-filter="none" data-name="birch plywood">
+              <span class="material__swatch" style="background:#ddbd8e"></span><span>Birch plywood 18 mm<br><small>2500 × 1250</small></span><small>18 mm</small>
+            </button>
+            <button type="button" class="material" aria-pressed="false" data-src="assets/img/bench-pet-felt.jpg" data-filter="none" data-name="orange PET felt">
+              <span class="material__swatch" style="background:#e0571f"></span><span>PET felt 12 mm · orange<br><small>2800 × 1220</small></span><small>12 mm</small>
+            </button>
+            <button type="button" class="material" aria-pressed="false" data-src="assets/img/bench-birch.jpg" data-filter="grayscale(1) brightness(.42) contrast(1.35)" data-name="black MDF">
+              <span class="material__swatch" style="background:#1e1e1d"></span><span>MDF 18 mm · black<br><small>2800 × 2070</small></span><small>18 mm</small>
+            </button>
+            <button type="button" class="material" aria-pressed="false" data-src="assets/img/bench-birch.jpg" data-filter="sepia(.35) saturate(1.3) brightness(.6) contrast(1.1)" data-name="walnut veneer">
+              <span class="material__swatch" style="background:#6b4428"></span><span>Walnut veneer 18 mm<br><small>2500 × 1250</small></span><small>18 mm</small>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 03 FIXTURES & LED ================= -->
+<section id="fixtures" class="section section--dark section--blend-dark" aria-labelledby="fixtures-title">
+  <div class="wrap">
+    <div class="chapter-head" data-reveal>
+      <div class="chapter-head__label"><span class="chapter-head__num" aria-hidden="true">03</span><span class="chapter-head__tag mono">Fixtures</span></div>
+      <div class="chapter-head__text">
+        <h2 id="fixtures-title" class="display h2">Add fixtures <span class="serif">and LED paths.</span></h2>
+        <p class="lede">Holding parts are generated with the product, from the same sheet. Draw a line — get a groove for the LED strip.</p>
+      </div>
+    </div>
+
+    <div class="stage">
+      <img class="shot" data-reveal="grow" src="assets/img/flow-veins-led.jpg" width="1600" height="1000" alt="Free-shape relief wall with an LED back light" loading="lazy">
+
+      <div class="float float--tl" data-reveal="pop">
+        <div class="ui">
+          <div class="ui__head"><span>Generators</span><span>C · Cloud wall</span></div>
+          <div class="ui__body">
+            <span class="ui__group">Base shape</span>
+            <div class="ui__item"><span class="tick"></span>Wall</div>
+            <div class="ui__group-row"><span class="ui__group">Relief</span><span class="ui__plus" aria-hidden="true">+</span></div>
+            <div class="ui__item"><span class="tick"></span>Flow Veins</div>
+            <div class="ui__item is-on"><span class="tick"></span>LED curves</div>
+            <span class="ui__group">Slicing</span>
+            <div class="ui__item"><span class="tick"></span>Slicer</div>
+            <span class="ui__group">Holding parts</span>
+            <div class="ui__item"><span class="tick"></span>Furring strips</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="float float--tr" data-reveal="pop">
+        <div class="ui">
+          <div class="ui__head"><span>LED curves</span><span>Relief</span></div>
+          <div class="ui__body">
+            <div class="ui__row"><span class="ui__label">Line</span><div class="ui__select"><span>Outline offset</span><span aria-hidden="true">▾</span></div></div>
+            <div class="ui__row"><span class="ui__label">Groove depth</span><div class="ui__value">6.0 mm</div></div>
+            <div class="ui__row"><span class="ui__label">Groove width</span><div class="ui__value">12.0 mm</div></div>
+            <div class="ui__row"><span class="ui__label">Groove roundness</span><div class="ui__slider"><span class="ui__slider-fill" style="width:40%"></span><span class="ui__slider-val">0.40</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="float float--br" data-reveal="pop">
+        <div class="ui">
+          <div class="ui__head"><span>Furring strips</span><span>Holding parts</span></div>
+          <div class="ui__body">
+            <div class="ui__row"><span class="ui__label">Material</span><div class="ui__select"><span>Birch plywood 18</span><span aria-hidden="true">▾</span></div></div>
+            <div class="ui__row"><span class="ui__label">Rows</span><div class="ui__value">2</div></div>
+            <div class="ui__row"><span class="ui__label">Placing</span><div class="ui__select"><span>Auto</span><span aria-hidden="true">▾</span></div></div>
+            <div class="ui__row"><span class="ui__label">Finger length</span><div class="ui__value">10 mm</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 04 NESTING ================= -->
+<section id="nesting" class="section section--light section--blend-light" aria-labelledby="nesting-title">
+  <div class="wrap">
+    <div class="chapter-head" data-reveal>
+      <div class="chapter-head__label"><span class="chapter-head__num" aria-hidden="true">04</span><span class="chapter-head__tag mono">Nesting</span></div>
+      <div class="chapter-head__text">
+        <h2 id="nesting-title" class="display h2">Slats lay themselves <span class="serif">on the sheets.</span></h2>
+        <p class="lede">WPG packs every piece onto the sheets of its material, splits what is too long and numbers everything in assembly order. Press Nest.</p>
+      </div>
+    </div>
+
+    <div class="production">
+      <div class="ui" data-reveal="grow" style="border-radius:22px">
+        <div class="ui__head"><span>Production · Birch plywood 18 mm</span><span>Sheets 1–2 of 4</span></div>
+        <div class="sheets">
+          <div class="sheet-wrap">
+            <div class="sheet" data-sheet="0" role="img" aria-label="Sheet 1: nine numbered slats, every other one turned upside down to fit"></div>
+            <span class="mono">Sheet 1 · 2500 × 1250</span>
+          </div>
+          <div class="sheet-wrap">
+            <div class="sheet" data-sheet="1" role="img" aria-label="Sheet 2: seven numbered slats and two furring strips, F1 and F2"></div>
+            <span class="mono">Sheet 2 · 2500 × 1250 · 7 slats + 2 furring strips</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="production__side">
+        <div class="ui" data-reveal="pop">
+          <div class="ui__head"><span>Nesting</span><span></span></div>
+          <div class="ui__body">
+            <div class="ui__row"><span class="ui__label">Sheets</span><div class="ui__value">2500 × 1250</div></div>
+            <div class="ui__row"><span class="ui__label">Margins and gap</span><div class="ui__value">10 / 6 mm</div></div>
+            <div class="ui__row"><span class="ui__label">Turning</span><div class="ui__select"><span>0° and 180°</span><span aria-hidden="true">▾</span></div></div>
+            <div class="ui__row"><span class="ui__label">Split long pieces</span><div class="ui__check"><span class="tick"></span></div></div>
+            <div class="ui__row"><span class="ui__label">Seam joint</span><div class="ui__select"><span>Finger</span><span aria-hidden="true">▾</span></div></div>
+            <button type="button" class="ui-btn" id="nest-btn">Nest</button>
+          </div>
+        </div>
+        <div class="ui" data-reveal="pop">
+          <div class="ui__head"><span>General info</span><span>Example job</span></div>
+          <div class="ui__body">
+            <div class="ui__row"><span class="ui__label">Products</span><div class="ui__value">1</div></div>
+            <div class="ui__row"><span class="ui__label">Pieces</span><div class="ui__value">36</div></div>
+            <div class="ui__row"><span class="ui__label">Birch ply 18 mm</span><div class="ui__value">4 sheets</div></div>
+            <div class="ui__row"><span class="ui__label">Cut length</span><div class="ui__value">148.6 m</div></div>
+            <div class="ui__row"><span class="ui__label">Engrave length</span><div class="ui__value">9.2 m</div></div>
+            <div class="ui__row"><span class="ui__label">Cutting time</span><div class="ui__value">4 h 50 min</div></div>
+            <div class="ui__row"><span class="ui__label">Weight</span><div class="ui__value">61 kg</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 05 OUTPUT ================= -->
+<section id="output" class="section section--light section--tight-top" aria-labelledby="output-title">
+  <div class="wrap">
+    <div class="chapter-head" data-reveal>
+      <div class="chapter-head__label"><span class="chapter-head__num" aria-hidden="true">05</span><span class="chapter-head__tag mono">Output</span></div>
+      <div class="chapter-head__text">
+        <h2 id="output-title" class="display h2">Machine files and a full guide. <span class="serif">One click.</span></h2>
+        <p class="lede">G-code and DXF for every sheet, plus one PDF per product that walks the installer through every step.</p>
+      </div>
+    </div>
+
+    <div class="output">
+      <div class="ui" data-reveal="pop">
+        <div class="ui__head"><span>Files to make</span><span>Output</span></div>
+        <div class="ui__body">
+          <div class="ui__row"><span class="ui__label">Machine</span><div class="ui__select"><span>Router 3 m</span><span aria-hidden="true">▾</span></div></div>
+          <div class="ui__item"><span class="tick"></span>Machine file of each sheet</div>
+          <div class="ui__item"><span class="tick"></span>DXF of each sheet</div>
+          <div class="ui__item"><span class="tick"></span>Assembly PDF of each product</div>
+          <div class="ui__item"><span class="tick tick--off"></span>Labels for the pieces</div>
+          <button type="button" class="ui-btn" id="make-btn">Make files</button>
+        </div>
+        <div class="ui__head ui__head--split"><span>Files made</span><span id="files-count">6 / 6</span></div>
+        <ul class="ui__body ui__body--tight" id="files-list" style="list-style:none;margin:0" aria-live="polite">
+          <li class="file is-done"><span class="file__dot"></span>sheet_01.nc</li>
+          <li class="file is-done"><span class="file__dot"></span>sheet_02.nc</li>
+          <li class="file is-done"><span class="file__dot"></span>sheet_03.nc</li>
+          <li class="file is-done"><span class="file__dot"></span>sheet_04.nc</li>
+          <li class="file is-done"><span class="file__dot"></span>sheet_01–04.dxf</li>
+          <li class="file is-done"><span class="file__dot"></span>A_Flow-wall_assembly.pdf</li>
+        </ul>
+        <div class="check is-ok" id="files-check" role="status">
+          <span class="check__icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.2l2.3 2.3 4.7-5"/></svg></span>
+          <span class="check__text"><strong id="check-title">Checks passed</strong><span id="check-note">0 errors found</span></span>
+        </div>
+      </div>
+
+      <div class="pages">
+        <figure class="page page--1" data-reveal="grow">
+          <svg viewBox="0 0 300 424" role="img" aria-label="Assembly guide page, step 3 of 8: slats 1 to 14 are in place, slats 15 to 21 are added now, slats 22 to 28 come next. A side-view detail shows the flat side to the wall, the number at the top and the notches on furring strips F1 and F2.">
+            <text x="22" y="34" font-family="Archivo, sans-serif" font-weight="800" font-size="15" fill="#111110">A · Flow wall</text>
+            <text x="22" y="50" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#5E5C57">ASSEMBLY GUIDE · FRONT VIEW</text>
+            <text x="278" y="34" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="8" fill="#B93D0B">STEP 3 / 8</text>
+            <line x1="22" y1="60" x2="278" y2="60" stroke="#111110"/>
+            <rect x="22" y="76" width="256" height="142" fill="#F4F3F1"/>
+            <rect x="22" y="102" width="256" height="6" fill="#4A4842"/>
+            <rect x="22" y="190" width="256" height="6" fill="#4A4842"/>
+            <g fill="#E8DCC8" stroke="#8E8A82" stroke-width=".4">
+              <rect x="24" y="80" width="8" height="134"/><rect x="33" y="80" width="8" height="134"/><rect x="42" y="80" width="8" height="134"/><rect x="51" y="80" width="8" height="134"/><rect x="60" y="80" width="8" height="134"/><rect x="69" y="80" width="8" height="134"/><rect x="78" y="80" width="8" height="134"/><rect x="87" y="80" width="8" height="134"/><rect x="96" y="80" width="8" height="134"/><rect x="105" y="80" width="8" height="134"/><rect x="114" y="80" width="8" height="134"/><rect x="123" y="80" width="8" height="134"/><rect x="132" y="80" width="8" height="134"/><rect x="141" y="80" width="8" height="134"/>
+            </g>
+            <g fill="#FF5A1F">
+              <rect x="150" y="80" width="8" height="134"/><rect x="159" y="80" width="8" height="134"/><rect x="168" y="80" width="8" height="134"/><rect x="177" y="80" width="8" height="134"/><rect x="186" y="80" width="8" height="134"/><rect x="195" y="80" width="8" height="134"/><rect x="204" y="80" width="8" height="134"/>
+            </g>
+            <g fill="none" stroke="#B5B1A9" stroke-width=".6" stroke-dasharray="2 1.5">
+              <rect x="213" y="80" width="8" height="134"/><rect x="222" y="80" width="8" height="134"/><rect x="231" y="80" width="8" height="134"/><rect x="240" y="80" width="8" height="134"/><rect x="249" y="80" width="8" height="134"/><rect x="258" y="80" width="8" height="134"/><rect x="267" y="80" width="8" height="134"/>
+            </g>
+            <text x="181" y="72" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#B93D0B">15 – 21 NOW</text>
+            <text x="86" y="72" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#6E6A62">1 – 14 IN PLACE</text>
+            <text x="244" y="72" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#9A968E">22 – 28 NEXT</text>
+            <text x="22" y="230" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#4A4842">F1, F2 · FURRING STRIPS, SCREWED TO THE WALL IN STEP 2</text>
+            <rect x="22" y="244" width="256" height="122" rx="4" fill="#F7F6F3" stroke="#E2E0DB"/>
+            <text x="32" y="258" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#5E5C57">DETAIL · SIDE VIEW OF SLAT 15</text>
+            <line x1="58" y1="266" x2="58" y2="356" stroke="#111110" stroke-width="2.4"/>
+            <path d="M70 268 L86 268 Q102 288 90 306 Q80 324 98 340 Q104 350 92 356 L70 356 Z" fill="#FFE3D6" stroke="#FF5A1F"/>
+            <rect x="58" y="282" width="19" height="6" fill="#4A4842"/>
+            <rect x="58" y="334" width="19" height="6" fill="#4A4842"/>
+            <text x="52" y="287" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="6" fill="#4A4842">F1</text>
+            <text x="52" y="339" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="6" fill="#4A4842">F2</text>
+            <text x="72" y="277" font-family="JetBrains Mono, monospace" font-size="6.5" font-weight="500" fill="#B93D0B">15</text>
+            <line x1="84" y1="275" x2="122" y2="275" stroke="#B93D0B" stroke-width=".6"/>
+            <text x="126" y="278" font-family="Archivo, sans-serif" font-size="8" fill="#111110">Number at the top, on the flat side.</text>
+            <line x1="73" y1="312" x2="122" y2="312" stroke="#8E8A82" stroke-width=".6"/>
+            <text x="126" y="315" font-family="Archivo, sans-serif" font-size="8" fill="#111110">Flat side to the wall.</text>
+            <line x1="78" y1="337" x2="122" y2="337" stroke="#8E8A82" stroke-width=".6"/>
+            <text x="126" y="340" font-family="Archivo, sans-serif" font-size="8" fill="#111110">Notches sit on F1 and F2.</text>
+            <text x="22" y="384" font-family="Archivo, sans-serif" font-size="8.5" fill="#111110"><tspan font-weight="700" fill="#B93D0B">1 </tspan> Take slats 15 – 21 from sheets 2 and 3.</text>
+            <text x="22" y="398" font-family="Archivo, sans-serif" font-size="8.5" fill="#111110"><tspan font-weight="700" fill="#B93D0B">2 </tspan> Press each one onto F1 and F2 until it sits flush.</text>
+            <text x="150" y="414" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#9A968E">3</text>
+          </svg>
+        </figure>
+
+        <figure class="page page--2" data-reveal="grow">
+          <svg viewBox="0 0 300 424" role="img" aria-label="Sheet layout page: sheet 2 of 4 with numbered slats and furring strips F1 and F2">
+            <text x="22" y="34" font-family="Archivo, sans-serif" font-weight="800" font-size="15" fill="#111110">Sheet 2 / 4</text>
+            <text x="22" y="50" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#5E5C57">BIRCH PLYWOOD 18 MM · 2500 × 1250</text>
+            <line x1="22" y1="60" x2="278" y2="60" stroke="#111110"/>
+            <rect x="22" y="80" width="256" height="300" fill="#FAF8F4" stroke="#111110"/>
+            <g fill="none" stroke="#111110" stroke-width=".9">
+              <path d="M30 90 H270 V112 Q230 118 190 110 Q150 102 110 112 Q70 120 30 110 Z"/>
+              <path d="M30 122 H270 V146 Q230 150 190 140 Q150 132 110 142 Q70 152 30 142 Z"/>
+              <path d="M30 156 H270 V180 Q230 186 190 176 Q150 166 110 176 Q70 186 30 178 Z" stroke="#FF5A1F" stroke-width="1.4"/>
+              <path d="M30 190 H270 V214 Q230 220 190 210 Q150 200 110 212 Q70 222 30 212 Z"/>
+              <path d="M30 224 H270 V248 Q230 252 190 242 Q150 234 110 246 Q70 256 30 246 Z"/>
+              <path d="M30 258 H270 V282 Q230 288 190 278 Q150 268 110 280 Q70 290 30 280 Z"/>
+              <path d="M30 296 H270 V310 H30 Z"/>
+              <path d="M30 330 H270 V344 H30 Z"/>
+            </g>
+            <g fill="#FAF8F4" stroke="#111110" stroke-width=".8">
+              <rect x="78" y="90" width="5" height="7"/><rect x="148" y="90" width="5" height="7"/><rect x="218" y="90" width="5" height="7"/>
+              <rect x="78" y="122" width="5" height="7"/><rect x="148" y="122" width="5" height="7"/><rect x="218" y="122" width="5" height="7"/>
+              <rect x="78" y="156" width="5" height="7" stroke="#FF5A1F"/><rect x="148" y="156" width="5" height="7" stroke="#FF5A1F"/><rect x="218" y="156" width="5" height="7" stroke="#FF5A1F"/>
+              <rect x="78" y="190" width="5" height="7"/><rect x="148" y="190" width="5" height="7"/><rect x="218" y="190" width="5" height="7"/>
+              <rect x="78" y="224" width="5" height="7"/><rect x="148" y="224" width="5" height="7"/><rect x="218" y="224" width="5" height="7"/>
+              <rect x="78" y="258" width="5" height="7"/><rect x="148" y="258" width="5" height="7"/><rect x="218" y="258" width="5" height="7"/>
+              <rect x="58" y="296" width="4" height="7"/><rect x="88" y="296" width="4" height="7"/><rect x="118" y="296" width="4" height="7"/><rect x="148" y="296" width="4" height="7"/><rect x="178" y="296" width="4" height="7"/><rect x="208" y="296" width="4" height="7"/><rect x="238" y="296" width="4" height="7"/>
+              <rect x="58" y="330" width="4" height="7"/><rect x="88" y="330" width="4" height="7"/><rect x="118" y="330" width="4" height="7"/><rect x="148" y="330" width="4" height="7"/><rect x="178" y="330" width="4" height="7"/><rect x="208" y="330" width="4" height="7"/><rect x="238" y="330" width="4" height="7"/>
+            </g>
+            <g font-family="JetBrains Mono, monospace" font-size="7" fill="#111110">
+              <text x="36" y="102">10</text><text x="36" y="134">11</text><text x="36" y="168" fill="#B93D0B">12</text><text x="36" y="202">13</text><text x="36" y="236">14</text><text x="36" y="270">15</text>
+              <text x="34" y="306" font-size="6.5">F1</text><text x="34" y="340" font-size="6.5">F2</text>
+            </g>
+            <text x="150" y="414" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#9A968E">7</text>
+          </svg>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRODUCTS ================= -->
+<section id="products" class="section section--dark section--blend-dark" aria-labelledby="products-title">
+  <div class="wrap products-head">
+    <div class="products-head__text" data-reveal>
+      <p class="mono" style="margin:0;color:var(--accent)">Made with WPG</p>
+      <h2 id="products-title" class="display h2">One tool. Every panel product <span class="serif">your shop cuts.</span></h2>
+    </div>
+    <button type="button" class="btn btn--ghost" id="marquee-toggle" aria-pressed="false">Pause slideshow</button>
+  </div>
+
+  <div id="marquees">
+    <div class="marquee">
+      <div class="marquee__track">
+        <figure class="card"><img src="assets/img/wave-lobby-card.jpg" alt="Sculpted wave slat wall in a lobby" loading="lazy" width="900" height="507"><figcaption><span class="card__meta mono">Plywood · Router</span><span class="card__name">Sculpted wave wall</span></figcaption></figure>
+        <figure class="card"><img src="assets/img/acoustic-tree.jpg" alt="3D acoustic tree made of PET felt panels" loading="lazy" width="900" height="600"><figcaption><span class="card__meta mono">PET felt</span><span class="card__name">3D acoustic tree</span></figcaption></figure>
+        <figure class="card"><img src="assets/img/wave-bench-card.jpg" alt="Sliced wave bench in plywood" loading="lazy" width="900" height="900"><figcaption><span class="card__meta mono">Plywood · Router</span><span class="card__name">Sliced wave bench</span></figcaption></figure>
+        <figure class="card"><img src="assets/img/zoning-screens.jpg" alt="PET felt zoning screens between office desks" loading="lazy" width="900" height="600"><figcaption><span class="card__meta mono">PET felt</span><span class="card__name">Zoning desk screens</span></figcaption></figure>
+        <figure class="card"><img src="assets/img/flow-veins-free-shape.jpg" alt="Free-shape relief wall panel" loading="lazy" width="1600" height="1000"><figcaption><span class="card__meta mono">Plywood · Router</span><span class="card__name">Cloud relief wall</span></figcaption></figure>
+      </div>
+    </div>
+    <div class="marquee marquee--reverse">
+      <div class="marquee__track">
+        <figure class="card"><img src="assets/img/wave-slat-wall.jpg" alt="Wave slat wall with warm back light" loading="lazy" width="1200" height="800"><figcaption><span class="card__meta mono">Plywood · Router</span><span class="card__name">Wave slat wall</span></figcaption></figure>
+        <figure class="card"><img src="assets/img/acoustic-wall-panels.jpg" alt="PET felt acoustic wall panels behind an armchair" loading="lazy" width="900" height="600"><figcaption><span class="card__meta mono">PET felt</span><span class="card__name">Acoustic wall panels</span></figcaption></figure>
+        <figure class="card"><img src="assets/img/ceiling-baffles.jpg" alt="Black PET felt ceiling baffles above pendant lamps" loading="lazy" width="900" height="600"><figcaption><span class="card__meta mono">PET felt</span><span class="card__name">Ceiling baffles</span></figcaption></figure>
+        <figure class="card"><img src="assets/img/flow-veins-rectangle.jpg" alt="Flow Veins relief wall" loading="lazy" width="1600" height="1000"><figcaption><span class="card__meta mono">Plywood · Router</span><span class="card__name">Flow Veins wall</span></figcaption></figure>
+        <figure class="card"><img src="assets/img/bench-pet-felt.jpg" alt="Sliced wave bench in orange PET felt" loading="lazy" width="1536" height="1024"><figcaption><span class="card__meta mono">PET felt · Knife</span><span class="card__name">Felt wave bench</span></figcaption></figure>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= EARLY ACCESS ================= -->
+  <div class="wrap">
+    <div class="signup" id="early-access">
+      <div class="chapter-head" data-reveal>
+        <div class="chapter-head__text">
+          <p class="signup__status mono"><span class="live-dot" aria-hidden="true"></span>In development · early access open</p>
+        </div>
+        <div class="chapter-head__text">
+          <h2 class="display h2">Be first <span class="serif">to try WPG.</span></h2>
+          <p class="lede">WPG is being built right now. Join the early-access list and we'll invite you to test it on your own jobs — before anyone else.</p>
+        </div>
+      </div>
+
+      <form class="signup-form" id="signup-form" novalidate data-reveal="grow">
+        <div class="field">
+          <label class="mono" for="signup-email">Work email</label>
+          <input id="signup-email" type="email" name="email" placeholder="you@yourshop.com" autocomplete="email" required maxlength="200">
+        </div>
+        <div class="field">
+          <label class="mono" for="signup-shop">Shop name</label>
+          <input id="signup-shop" type="text" name="shop" placeholder="Your CNC shop" autocomplete="organization" maxlength="200">
+        </div>
+        <div class="hp" aria-hidden="true">
+          <label for="signup-website">Leave this field empty</label>
+          <input id="signup-website" type="text" name="website" tabindex="-1" autocomplete="off">
+        </div>
+        <button type="submit" class="btn btn--primary">Join early access</button>
+        <p class="signup-form__msg" id="signup-msg" role="status" aria-live="polite"></p>
+        <p class="signup-form__note">One email when your invite is ready. Nothing else. <a href="privacy.html">How we handle your data</a>.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div class="site-footer__brand">
+      <svg width="28" height="28" viewBox="0 0 34 34" aria-hidden="true"><rect x="1" y="1" width="32" height="32" rx="8" fill="#F2F1EE"/><path d="M9 8v18M14 11v12M19 8v18M24 13v8" stroke="#FF5A1F" stroke-width="2.5" stroke-linecap="round"/></svg>
+      <span class="brand__name">WPG</span>
+      <span class="mono" style="font-size:11px;color:#a8a49c">From idea to the machine</span>
+    </div>
+    <div class="site-footer__links mono">
+      <span class="owner">A product of <a href="https://ergolife.ua/" rel="noopener">Ergolife</a></span>
+      <a href="privacy.html">Privacy</a>
+      <a href="mailto:inegvin@gmail.com">inegvin@gmail.com</a>
+      <span>© <span id="year">2026</span> Ergolife</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
