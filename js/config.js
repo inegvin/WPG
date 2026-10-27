@@ -9,5 +9,5 @@
   and nothing is sent anywhere.
 */
 window.WPG_CONFIG = {
-  formEndpoint: ""
+  formEndpoint: "https://script.google.com/macros/s/AKfycbyEhvFKMOUQm53wuvki604dB--4ng7wV2UyHJw9Nm4F6yjZV1L8VYSBW5HdXsUS0NLg8g/exec"
 };
