@@ -12,7 +12,7 @@ privacy.html                the privacy page linked under the form
 css/styles.css              all the styles (colours and fonts are at the top)
 js/config.js                your settings — the form link goes here
 js/main.js                  the interactive parts (buttons, Nest, Make files, form)
-assets/img/                 the pictures
+assets/img/                 the pictures (WebP: small and fast)
 assets/favicon.svg          the little icon in the browser tab
 assets/og-image.jpg         the picture shown when the link is shared
 setup/google-apps-script.gs the code for the sign-up sheet (not used by the page itself)

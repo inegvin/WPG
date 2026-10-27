@@ -16,8 +16,9 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&amp;family=Instrument+Serif:ital@0;1&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
-  <link rel="preload" as="image" href="assets/img/hero-wave-lobby.jpg">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,400;100,600;100,700;125,800&amp;family=Instrument+Serif:ital@1&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,400;100,600;100,700;125,800&amp;family=Instrument+Serif:ital@1&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"></noscript>
+  <link rel="preload" as="image" href="assets/img/hero-wave-lobby.webp" imagesrcset="assets/img/hero-wave-lobby-900.webp 900w, assets/img/hero-wave-lobby.webp 1672w" imagesizes="100vw" fetchpriority="high">
   <link rel="stylesheet" href="css/styles.css">
 
   <script>document.documentElement.classList.add('js');</script>
@@ -29,7 +30,7 @@
 
 <!-- ================= HERO ================= -->
 <div class="hero">
-  <img class="hero__bg" src="assets/img/hero-wave-lobby.jpg" alt="" width="1672" height="941">
+  <img class="hero__bg" src="assets/img/hero-wave-lobby.webp" srcset="assets/img/hero-wave-lobby-900.webp 900w, assets/img/hero-wave-lobby.webp 1672w" sizes="100vw" alt="" width="1672" height="941" fetchpriority="high" decoding="async">
   <div class="hero__scrim" aria-hidden="true"></div>
 
   <header class="site-header">
@@ -77,7 +78,7 @@
     </div>
 
     <div class="stage">
-      <img class="shot" id="outline-shot" data-reveal="grow" src="assets/img/flow-veins-rectangle.jpg" width="1600" height="1000" alt="Flow Veins relief wall with a rectangular outline, on a dining-room wall" loading="lazy">
+      <img class="shot" id="outline-shot" data-reveal="grow" src="assets/img/flow-veins-rectangle.webp" width="1600" height="1000" alt="Flow Veins relief wall with a rectangular outline, on a dining-room wall" loading="lazy" decoding="async">
 
       <div class="float float--tl" data-reveal="pop">
         <div class="ui" aria-label="Generator stack, interface preview">
@@ -126,7 +127,7 @@
     </div>
     <div class="stage" id="slicer">
       <div class="shot-frame" data-reveal="grow">
-        <img id="slicer-shot" src="assets/img/ceiling-parallel.jpg" width="1200" height="1200" alt="Suspended baffle ceiling made of parallel slats" loading="lazy">
+        <img id="slicer-shot" src="assets/img/ceiling-parallel.webp" width="1200" height="1200" alt="Suspended baffle ceiling made of parallel slats" loading="lazy" decoding="async">
       </div>
 
       <div class="float float--tl" data-reveal="pop">
@@ -180,21 +181,21 @@
     </div>
 
     <div class="stage">
-      <img class="shot" id="material-shot" data-reveal="grow" src="assets/img/bench-birch.jpg" width="1254" height="1254" alt="Sliced wave bench in birch plywood" loading="lazy">
+      <img class="shot" id="material-shot" data-reveal="grow" src="assets/img/bench-birch.webp" width="1254" height="1254" alt="Sliced wave bench in birch plywood" loading="lazy" decoding="async">
       <div class="float float--tr float--wide" data-reveal="pop">
         <div class="ui">
           <div class="ui__head"><span>Materials</span><span>4 in project</span></div>
           <div class="ui__body ui__body--tight" role="group" aria-label="Pick a material">
-            <button type="button" class="material" aria-pressed="true" data-src="assets/img/bench-birch.jpg" data-filter="none" data-name="birch plywood">
+            <button type="button" class="material" aria-pressed="true" data-src="assets/img/bench-birch.webp" data-filter="none" data-name="birch plywood">
               <span class="material__swatch" style="background:#ddbd8e"></span><span>Birch plywood 18 mm<br><small>2500 × 1250</small></span><small>18 mm</small>
             </button>
-            <button type="button" class="material" aria-pressed="false" data-src="assets/img/bench-pet-felt.jpg" data-filter="none" data-name="orange PET felt">
+            <button type="button" class="material" aria-pressed="false" data-src="assets/img/bench-pet-felt.webp" data-filter="none" data-name="orange PET felt">
               <span class="material__swatch" style="background:#e0571f"></span><span>PET felt 12 mm · orange<br><small>2800 × 1220</small></span><small>12 mm</small>
             </button>
-            <button type="button" class="material" aria-pressed="false" data-src="assets/img/bench-birch.jpg" data-filter="grayscale(1) brightness(.42) contrast(1.35)" data-name="black MDF">
+            <button type="button" class="material" aria-pressed="false" data-src="assets/img/bench-birch.webp" data-filter="grayscale(1) brightness(.42) contrast(1.35)" data-name="black MDF">
               <span class="material__swatch" style="background:#1e1e1d"></span><span>MDF 18 mm · black<br><small>2800 × 2070</small></span><small>18 mm</small>
             </button>
-            <button type="button" class="material" aria-pressed="false" data-src="assets/img/bench-birch.jpg" data-filter="sepia(.35) saturate(1.3) brightness(.6) contrast(1.1)" data-name="walnut veneer">
+            <button type="button" class="material" aria-pressed="false" data-src="assets/img/bench-birch.webp" data-filter="sepia(.35) saturate(1.3) brightness(.6) contrast(1.1)" data-name="walnut veneer">
               <span class="material__swatch" style="background:#6b4428"></span><span>Walnut veneer 18 mm<br><small>2500 × 1250</small></span><small>18 mm</small>
             </button>
           </div>
@@ -216,7 +217,7 @@
     </div>
 
     <div class="stage">
-      <img class="shot" data-reveal="grow" src="assets/img/flow-veins-led.jpg" width="1600" height="1000" alt="Free-shape relief wall with an LED back light" loading="lazy">
+      <img class="shot" data-reveal="grow" src="assets/img/flow-veins-led.webp" width="1600" height="1000" alt="Free-shape relief wall with an LED back light" loading="lazy" decoding="async">
 
       <div class="float float--tl" data-reveal="pop">
         <div class="ui">
@@ -449,20 +450,20 @@
   <div id="marquees">
     <div class="marquee">
       <div class="marquee__track">
-        <figure class="card"><img src="assets/img/wave-lobby-card.jpg" alt="Sculpted wave slat wall in a lobby" loading="lazy" width="900" height="507"><figcaption><span class="card__meta mono">Plywood · Router</span><span class="card__name">Sculpted wave wall</span></figcaption></figure>
-        <figure class="card"><img src="assets/img/acoustic-tree.jpg" alt="3D acoustic tree made of PET felt panels" loading="lazy" width="900" height="600"><figcaption><span class="card__meta mono">PET felt</span><span class="card__name">3D acoustic tree</span></figcaption></figure>
-        <figure class="card"><img src="assets/img/wave-bench-card.jpg" alt="Sliced wave bench in plywood" loading="lazy" width="900" height="900"><figcaption><span class="card__meta mono">Plywood · Router</span><span class="card__name">Sliced wave bench</span></figcaption></figure>
-        <figure class="card"><img src="assets/img/zoning-screens.jpg" alt="PET felt zoning screens between office desks" loading="lazy" width="900" height="600"><figcaption><span class="card__meta mono">PET felt</span><span class="card__name">Zoning desk screens</span></figcaption></figure>
-        <figure class="card"><img src="assets/img/flow-veins-free-shape.jpg" alt="Free-shape relief wall panel" loading="lazy" width="1600" height="1000"><figcaption><span class="card__meta mono">Plywood · Router</span><span class="card__name">Cloud relief wall</span></figcaption></figure>
+        <figure class="card"><img src="assets/img/wave-lobby-card.webp" alt="Sculpted wave slat wall in a lobby" loading="lazy" decoding="async" width="900" height="507"><figcaption><span class="card__meta mono">Plywood · Router</span><span class="card__name">Sculpted wave wall</span></figcaption></figure>
+        <figure class="card"><img src="assets/img/acoustic-tree.webp" alt="3D acoustic tree made of PET felt panels" loading="lazy" decoding="async" width="900" height="600"><figcaption><span class="card__meta mono">PET felt</span><span class="card__name">3D acoustic tree</span></figcaption></figure>
+        <figure class="card"><img src="assets/img/wave-bench-card.webp" alt="Sliced wave bench in plywood" loading="lazy" decoding="async" width="900" height="900"><figcaption><span class="card__meta mono">Plywood · Router</span><span class="card__name">Sliced wave bench</span></figcaption></figure>
+        <figure class="card"><img src="assets/img/zoning-screens.webp" alt="PET felt zoning screens between office desks" loading="lazy" decoding="async" width="900" height="600"><figcaption><span class="card__meta mono">PET felt</span><span class="card__name">Zoning desk screens</span></figcaption></figure>
+        <figure class="card"><img src="assets/img/card-flow-veins-free-shape.webp" alt="Free-shape relief wall panel" loading="lazy" decoding="async" width="1600" height="1000"><figcaption><span class="card__meta mono">Plywood · Router</span><span class="card__name">Cloud relief wall</span></figcaption></figure>
       </div>
     </div>
     <div class="marquee marquee--reverse">
       <div class="marquee__track">
-        <figure class="card"><img src="assets/img/wave-slat-wall.jpg" alt="Wave slat wall with warm back light" loading="lazy" width="1200" height="800"><figcaption><span class="card__meta mono">Plywood · Router</span><span class="card__name">Wave slat wall</span></figcaption></figure>
-        <figure class="card"><img src="assets/img/acoustic-wall-panels.jpg" alt="PET felt acoustic wall panels behind an armchair" loading="lazy" width="900" height="600"><figcaption><span class="card__meta mono">PET felt</span><span class="card__name">Acoustic wall panels</span></figcaption></figure>
-        <figure class="card"><img src="assets/img/ceiling-baffles.jpg" alt="Black PET felt ceiling baffles above pendant lamps" loading="lazy" width="900" height="600"><figcaption><span class="card__meta mono">PET felt</span><span class="card__name">Ceiling baffles</span></figcaption></figure>
-        <figure class="card"><img src="assets/img/flow-veins-rectangle.jpg" alt="Flow Veins relief wall" loading="lazy" width="1600" height="1000"><figcaption><span class="card__meta mono">Plywood · Router</span><span class="card__name">Flow Veins wall</span></figcaption></figure>
-        <figure class="card"><img src="assets/img/bench-pet-felt.jpg" alt="Sliced wave bench in orange PET felt" loading="lazy" width="1536" height="1024"><figcaption><span class="card__meta mono">PET felt · Knife</span><span class="card__name">Felt wave bench</span></figcaption></figure>
+        <figure class="card"><img src="assets/img/wave-slat-wall.webp" alt="Wave slat wall with warm back light" loading="lazy" decoding="async" width="1200" height="800"><figcaption><span class="card__meta mono">Plywood · Router</span><span class="card__name">Wave slat wall</span></figcaption></figure>
+        <figure class="card"><img src="assets/img/acoustic-wall-panels.webp" alt="PET felt acoustic wall panels behind an armchair" loading="lazy" decoding="async" width="900" height="600"><figcaption><span class="card__meta mono">PET felt</span><span class="card__name">Acoustic wall panels</span></figcaption></figure>
+        <figure class="card"><img src="assets/img/ceiling-baffles.webp" alt="Black PET felt ceiling baffles above pendant lamps" loading="lazy" decoding="async" width="900" height="600"><figcaption><span class="card__meta mono">PET felt</span><span class="card__name">Ceiling baffles</span></figcaption></figure>
+        <figure class="card"><img src="assets/img/card-flow-veins-rectangle.webp" alt="Flow Veins relief wall" loading="lazy" decoding="async" width="1600" height="1000"><figcaption><span class="card__meta mono">Plywood · Router</span><span class="card__name">Flow Veins wall</span></figcaption></figure>
+        <figure class="card"><img src="assets/img/card-bench-pet-felt.webp" alt="Sliced wave bench in orange PET felt" loading="lazy" decoding="async" width="1536" height="1024"><figcaption><span class="card__meta mono">PET felt · Knife</span><span class="card__name">Felt wave bench</span></figcaption></figure>
       </div>
     </div>
   </div>

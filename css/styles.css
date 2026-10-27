@@ -374,7 +374,7 @@ button, input { font: inherit; }
 .marquee + .marquee { margin-top: 20px; }
 .marquee__track { display: flex; gap: 20px; width: max-content; animation: marquee 70s linear infinite; }
 .marquee--reverse .marquee__track { animation-direction: reverse; animation-duration: 85s; }
-.marquee:hover .marquee__track, .is-paused .marquee__track { animation-play-state: paused; }
+.marquee:hover .marquee__track, .is-paused .marquee__track, .is-offscreen .marquee__track { animation-play-state: paused; }
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .card {
   position: relative; flex: 0 0 auto; width: 360px; height: 440px; margin: 0;

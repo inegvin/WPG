@@ -62,8 +62,8 @@
   /* ---------- 01 Outline: Rectangle / Free shape ---------- */
   var outlineShot = $('#outline-shot');
   var OUTLINES = {
-    rectangle: { src: 'assets/img/flow-veins-rectangle.jpg', alt: 'Flow Veins relief wall with a rectangular outline, on a dining-room wall' },
-    free: { src: 'assets/img/flow-veins-free-shape.jpg', alt: 'Flow Veins relief wall with a free-shape outline, on a dining-room wall' }
+    rectangle: { src: 'assets/img/flow-veins-rectangle.webp', alt: 'Flow Veins relief wall with a rectangular outline, on a dining-room wall' },
+    free: { src: 'assets/img/flow-veins-free-shape.webp', alt: 'Flow Veins relief wall with a free-shape outline, on a dining-room wall' }
   };
   var outlineButtons = $$('[data-outline]');
   if (outlineShot && outlineButtons.length) {
@@ -81,8 +81,8 @@
   var slicer = $('#slicer');
   if (slicer) {
     var SLICES = {
-      parallel: { name: 'Parallel slats', src: 'assets/img/ceiling-parallel.jpg', alt: 'Suspended baffle ceiling made of parallel slats' },
-      cross: { name: 'Cross-slices', src: 'assets/img/ceiling-cross.jpg', alt: 'Suspended baffle ceiling made of cross-slices' }
+      parallel: { name: 'Parallel slats', src: 'assets/img/ceiling-parallel.webp', alt: 'Suspended baffle ceiling made of parallel slats' },
+      cross: { name: 'Cross-slices', src: 'assets/img/ceiling-cross.webp', alt: 'Suspended baffle ceiling made of cross-slices' }
     };
     var slicerShot = $('#slicer-shot');
     var slicerName = $('#slicer-name');
@@ -122,7 +122,7 @@
   var materialShot = $('#material-shot');
   var materials = $$('.material');
   if (materialShot && materials.length) {
-    preload(['assets/img/bench-pet-felt.jpg']);
+    preload(['assets/img/bench-pet-felt.webp']);
     materials.forEach(function (btn) {
       btn.addEventListener('click', function () {
         materials.forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
@@ -260,6 +260,12 @@
   });
   var marquees = $('#marquees');
   var marqueeToggle = $('#marquee-toggle');
+  // Stop the moving rows while they are off screen, to save battery and keep scrolling smooth.
+  if (marquees && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (e) {
+      marquees.classList.toggle('is-offscreen', !e[0].isIntersecting);
+    }, { rootMargin: '200px 0px' }).observe(marquees);
+  }
   if (marquees && marqueeToggle) {
     if (reduceMotion) { marqueeToggle.hidden = true; }
     marqueeToggle.addEventListener('click', function () {
